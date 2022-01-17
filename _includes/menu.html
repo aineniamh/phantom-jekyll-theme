@@ -1,18 +1,9 @@
 <nav id="menu">
 	<h2>Menu</h2>
 	<ul>
-
-		{% for page in site.pages %}
-		{% if page.path == "index.html" %}
-		<li><a href="{{ page.url | prepend: site.baseurl | remove: "index.html" }}">{{ page.title }}</a></li>
-		{% endif %} {% endfor %}
-
-		{% for page in site.pages %}
-
-		{% if page.title %}
-
-		<li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title | remove: "Home" }}</a></li>
-
-		{% endif %} {% endfor %}
+		<li><a href="{{ page.url | prepend: site.baseurl }}">Home</a></li>
+		<li><a href="https://github.com/aineniamh">Software</a></li>
+		<li><a href="https://www.researchgate.net/profile/Aine_Niamh_Otoole">Publications</a></li>
+		<li><a href="{{ page.url | prepend: site.baseurl }}/cv.html">CV</a></li>
 	</ul>
 </nav>
